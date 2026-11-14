@@ -23,6 +23,22 @@ body = re.sub(r"<h([234])\s*\n\s*", r"<h\1 ", body)
 body = body.replace("<blockquote>", '<blockquote class="sutra">')
 body = body.replace("<table>", '<table class="t">')
 
+import base64
+FIG = BOOK / "figures"
+def fig_cup():
+    png = (FIG / "图1-三才五蕴太极空杯.png").read_bytes()
+    b64 = base64.b64encode(png).decode()
+    return ('<figure class="fig"><img alt="三才五蕴太极空杯" src="data:image/png;base64,%s">'
+            '<figcaption>图一　三才五蕴太极空杯（《心经通释》原版模型，图二原型照录）<br>'
+            '<span>色为杯底，受想行识为四壁；空性超越器相边界，芥子纳须弥。</span></figcaption></figure>' % b64)
+
+def fig_fengfan():
+    svg = (FIG / "图2-风幡阴阳太和.svg").read_text(encoding="utf-8")
+    return ('<figure class="fig">%s<figcaption>图二　风幡阴阳太和<br>'
+            '<span>幡为阴、风为阳、心为涵摄阴阳之太和；此心非心，故名此心。</span></figcaption></figure>' % svg)
+
+body = body.replace("<!-- FIG:cup -->", fig_cup()).replace("<!-- FIG:fengfan -->", fig_fengfan())
+
 parts = re.findall(r'<h1 id="([^"]+)"[^>]*>(.*?)</h1>', body, flags=re.S)
 nav = "\n".join('<li><a href="#%s"><i>·</i><span>%s</span></a></li>'
                 % (hid, re.sub(r"<[^>]+>", "", raw).strip())
