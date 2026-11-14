@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+__FAVICON__
+<title>润泽说 道可道之坛经 · 通释</title>
+<style>
+:root{--paper:#F7F4EE;--paper2:#FCFAF6;--ink:#25211D;--ink2:#3B352F;--ochre:#994433;--brown:#7C6D5C;--line:#DCD5C8;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC","Source Han Serif SC",serif;
+  -webkit-font-smoothing:antialiased;line-height:1.95;}
+.page{max-width:760px;margin:0 auto;padding:56px 28px 80px;}
+
+.cover{border:1px solid var(--line);background:var(--paper2);padding:70px 38px 58px;
+  text-align:center;margin-bottom:44px;position:relative;}
+.cover::before{content:"";position:absolute;inset:12px;border:1px solid #EBE4D8;pointer-events:none;}
+.cover .series{font-size:12.5px;letter-spacing:.32em;color:var(--brown);margin-bottom:24px;}
+.cover h1{font-size:38px;font-weight:700;letter-spacing:.16em;margin:0 0 8px;line-height:1.5;}
+.cover .sub{font-size:14.5px;color:var(--brown);letter-spacing:.1em;}
+.cover .tag{display:inline-block;margin-top:14px;padding:3px 12px;font-size:12px;
+  letter-spacing:.16em;color:var(--ochre);border:1px solid #D8B9AE;}
+.cover .rule{width:52px;height:2px;background:var(--ochre);margin:22px auto 18px;}
+.cover .verse{font-size:14.5px;color:var(--brown);letter-spacing:.06em;line-height:2.1;}
+.cover .meta{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 0;font-size:12px;color:#9C8E7C;letter-spacing:.12em;margin-top:26px;}
+.cover .meta span{white-space:nowrap;}
+.cover .meta span:not(:last-child)::after{content:"　·　";color:#C4B9A8;}
+
+.notice{border:1px solid #D8B9AE;background:#FBF3EE;padding:16px 20px;margin-bottom:40px;
+  font-size:14.5px;line-height:1.9;color:#5A4B3F;}
+.notice strong{color:var(--ochre);}
+
+.toc{background:var(--paper2);border:1px solid var(--line);padding:18px 22px;margin-bottom:48px;}
+.toc h4{margin:0 0 10px;font-size:12.5px;letter-spacing:.22em;color:var(--brown);font-weight:400;}
+.toc ol{list-style:none;margin:0;padding:0;}
+.toc li a{display:flex;gap:9px;align-items:baseline;text-decoration:none;color:var(--ink);
+  font-size:14.5px;padding:6px 0;border-bottom:1px dotted #E4DDD0;}
+.toc li a:hover{color:var(--ochre);}
+.toc i{font-style:normal;font-size:11.5px;color:var(--ochre);min-width:12px;}
+
+h2{font-size:23px;font-weight:700;letter-spacing:.06em;margin:52px 0 22px;
+  padding-top:18px;border-top:1px solid var(--line);}
+h2::before{content:"";display:block;width:30px;height:2px;background:var(--ochre);margin:0 0 15px;}
+h3{font-size:15px;font-weight:600;letter-spacing:.14em;color:var(--ochre);
+  margin:28px 0 10px;display:flex;align-items:center;gap:10px;}
+h3::after{content:"";flex:1;height:1px;background:#EAE3D6;}
+
+p{margin:0 0 1.02em;font-size:16.5px;color:var(--ink2);text-align:justify;}
+ul{margin:0 0 16px;padding-left:0;list-style:none;}
+li{font-size:16px;color:var(--ink2);margin-bottom:8px;padding-left:16px;position:relative;text-align:justify;}
+li::before{content:"";position:absolute;left:0;top:.85em;width:5px;height:5px;background:#C9B7A4;border-radius:50%;}
+ol{margin:0 0 16px;padding-left:1.8em;}
+ol li{padding-left:0;}
+ol li::before{content:none;}
+
+blockquote.sutra{margin:22px 0 26px;padding:16px 20px;background:#FBF3EE;
+  border-left:3px solid var(--ochre);}
+blockquote.sutra p{margin:0 0 .6em;font-size:15.5px;line-height:2.05;color:#4A4139;letter-spacing:.03em;}
+blockquote.sutra p:last-child{margin-bottom:0;}
+
+table.t{width:100%;border-collapse:collapse;margin:14px 0 24px;font-size:13.5px;}
+table.t th,table.t td{border:1px solid var(--line);padding:8px 10px;text-align:left;
+  vertical-align:top;line-height:1.7;word-break:break-word;}
+table.t th{background:#F1EAE0;font-weight:600;}
+table.t td{color:var(--ink2);}
+
+.foot{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);text-align:center;
+  font-size:12.5px;color:var(--brown);letter-spacing:.1em;line-height:2.1;}
+
+@media (max-width:640px){
+  .page{padding:30px 17px 54px;}
+  .cover{padding:48px 22px 42px;}
+  .cover h1{font-size:28px;}
+  .cover .verse{font-size:13px;}
+  .cover .meta{font-size:10.5px;letter-spacing:.04em;margin-top:22px;}
+  h2{font-size:20px;margin-top:40px;}
+  p{font-size:15.5px;}
+  li{font-size:15px;}
+  table.t{font-size:12px;display:block;overflow-x:auto;white-space:nowrap;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="cover">
+    <div class="series">润泽说 · 道可道</div>
+    <h1>六　祖　坛　经</h1>
+    <div class="sub">六祖大师法宝坛经 · 通释</div>
+    <div class="tag">初 稿 · 五 品</div>
+    <div class="rule"></div>
+    <div class="verse">菩提本无树，明镜亦非台；<br>本来无一物，何处惹尘埃。</div>
+    <div class="meta"><span>敦煌本 S.5475</span><span>三才五蕴太极空杯</span><span>阴阳太和</span></div>
+  </div>
+
+  <div class="notice">
+    <strong>初稿 · 五品已成。</strong>已完成总序、凡例，与行由品、般若品、疑问品、定慧品、坐禅品共五品；余六品未撰，不以伪作充数。底本用敦煌本 S.5475，体例统一「原文｜背景｜字源｜深解｜体系联动｜和合对照｜跨典互参｜小结」。
+  </div>
+
+  <nav class="toc"><h4>目　次</h4><ol>__NAV__</ol></nav>
+  <main>__BODY__</main>
+  <div class="foot">润泽说 道可道之坛经 · 通释（初稿 · 五品）· v0.1.0<br>破执在金刚，归心在坛经</div>
+</div>
+</body>
+</html>

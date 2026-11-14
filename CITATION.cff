@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "若引用本书，请用下列格式。"
+title: "润泽说 道可道之坛经"
+abstract: "《六祖大师法宝坛经》通释。以敦煌本 S.5475 为底本，依「三才五蕴太极空杯」「阴阳太和」「和合之辨」与《金刚经》般若范式逐品通释。初稿已完成总序、凡例与五品。"
+authors:
+  - name: "润泽"
+date-released: 2026-11-14
+version: 0.1.0
+license: CC-BY-NC-SA-4.0
+repository-code: "https://github.com/q1z2q3-debug/daokedao-tanjing"
+url: "https://q1z2q3-debug.github.io/daokedao-tanjing/"
