@@ -27,3 +27,29 @@
 - 底本用敦煌本（S.5475）；体例固定八段：原文｜背景｜字源｜深解｜体系联动｜和合对照｜跨典互参｜小结。
 - 行由品内嵌两篇核心专释：自性五句、风幡公案（幡阴风阳、心是太和，此心非心故名此心）。
 - 母本 + 单文件阅读版 + 构建脚本 + 站点首页。
+
+## v1.2.0 · 工程补齐（同日续记）
+
+### 正文
+- 凡例「一、底本」段末补品题一句：品题依通行十品立目，敦煌本原不分品，立目只为便于阅读，不改动经文文字。
+- 书末增三篇附录：附录一三十六对表、附录二三科表、附录三品目对照。
+  - 考据：敦煌本原文实列 **三十三对**，与「三十六对」之名差三；宗宝本补足为三十六（外境无情五对／法相语言十二对／自性起用十九对）。附录照录三十三对、分七组，注明「照录不补」。
+
+### 站点（18 页）
+- 新增 `scripts/build_site.py`：切出卷首（总序＋凡例）、十品、后记、附录，逐页生成。
+- 页面：`/`、`/preface.html`、`/chapters/`＋十品、`/afterword.html`、`/appendix.html`、`/downloads/`、`/book.html`、`/english/`。
+- 机器入口：`llms.txt`、`sitemap.xml`（18 URL）、`robots.txt`（放行 GPTBot／OAI-SearchBot／ChatGPT-User／ClaudeBot／PerplexityBot／Google-Extended／CCBot／Bytespider）、`favicon.svg`。
+- 附图落位：图一 `docs/figures/cup.png`、图二 `docs/figures/fengfan.svg`，嵌行由品页。
+
+### 成书 PDF
+- 新增 `scripts/build_pdf.py`（weasyprint，A5）：封面、扉页、双栏目录（`target-counter` 真实页码）、卷首、十品、后记、附录。
+- 产物 `book/润泽说 道可道之坛经.pdf`，104 页，1.33 MB；图一、图二按原位置图。
+
+### 离线 APK
+- `apk/` 由金刚经壳改造：包名 `com.daokedao.tanjing`，versionName 1.2.0，versionCode 12000，字体族 `TanjingSerif`。
+- 字子集 1,615 用字；`book.html` 外链 0。
+- 产物 1,512,484 B，零权限，证书 SHA-256 与五书一致；归档 `packages/apk-1.2.0-tanjing/`（APK ＋ SHA256SUMS ＋ README）。
+
+### 存档
+- Zenodo DOI `10.5281/zenodo.24223179`（md／PDF／HTML／APK 四附件）。
+- `CITATION.cff` 版本改 1.2.0，摘要改十品，补 DOI。

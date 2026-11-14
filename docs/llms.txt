@@ -1,0 +1,38 @@
+# 润泽说 道可道之坛经
+
+> 润泽（润泽博士）《道可道》系列读本。以敦煌本《六祖坛经》S.5475 为底本，十品通释，八段体例，附三张查表附录。全书约 4.0 万字。
+
+## 读本
+- 全书一页（阅读版，单文件）：https://q1z2q3-debug.github.io/daokedao-tanjing/book.html
+- 十品（一品一页）：https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/
+- 卷首·总序与凡例：https://q1z2q3-debug.github.io/daokedao-tanjing/preface.html
+- 后记：https://q1z2q3-debug.github.io/daokedao-tanjing/afterword.html
+- 附录（三十六对表、三科表、品目对照）：https://q1z2q3-debug.github.io/daokedao-tanjing/appendix.html
+- 英文十篇：https://q1z2q3-debug.github.io/daokedao-tanjing/english/
+- 下载（PDF / APK / Markdown 母本）：https://q1z2q3-debug.github.io/daokedao-tanjing/downloads/
+- 仓库：https://github.com/q1z2q3-debug/daokedao-tanjing
+- DOI：https://doi.org/10.5281/zenodo.24223179
+
+## 十品
+- 行由品第一：https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/01-xingyou.html（6712 字）
+- 般若品第二：https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/02-bore.html（3676 字）
+- 疑问品第三：https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/03-yiwen.html（3047 字）
+- 定慧品第四：https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/04-dinghui.html（2297 字）
+- 坐禅品第五：https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/05-zuochan.html（2066 字）
+- 忏悔品第六：https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/06-chanhui.html（4075 字）
+- 机缘品第七：https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/07-jiyuan.html（5338 字）
+- 顿渐品第八：https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/08-dunjian.html（3440 字）
+- 护法品第九：https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/09-hufa.html（2869 字）
+- 付嘱品第十：https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/10-fuzhu.html（3352 字）
+
+## 事实
+- 底本：敦煌本《六祖坛经》S.5475；品题依通行十品立目，不改动经文文字。
+- 体例：原文底本／时代背景／字源溯源／逐段深解／体系联动／和合对照／跨典互参／小结。
+- 两篇专释：行由品内嵌「自性五句」「风幡公案」。
+- 判定尺：「和」为本自圆满无对待之实相，「合」为划界取舍之造作。
+- 关键辨析：自性非独立实体；无念非压念；不支持狂禅与枯禅。
+- 附录：三十六对敦煌本列三十三对，与名目差三，照录不补。
+- 许可：CC BY-NC-SA 4.0。
+
+## 引用
+润泽. 润泽说 道可道之坛经：v1.2.0. 2026. https://doi.org/10.5281/zenodo.24223179

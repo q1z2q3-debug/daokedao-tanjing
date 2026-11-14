@@ -1,6 +1,6 @@
 # 润泽说 道可道之坛经 · 通释
 
-> 十品圆满，封面、扉页与附图二（v1.2.0）。
+> 十品圆满，封面、扉页与附图二（v1.2.0）。站点十八页、A5 成书 PDF 一百零四页、安卓离线包零权限，DOI 已存缴。
 
 《六祖大师法宝坛经》通释。底本用敦煌本（S.5475），体例与同系列《金刚经》《心经》一致。
 
@@ -29,6 +29,9 @@
 | 护法品第九 | 道由心悟 · 烦恼即菩提 · 实性 · 辨外道不生不灭 |
 | 付嘱品第十 | 三科 · 三十六对 · 真假动静偈 · 末后一偈 |
 | 后记 | 成书现状 · 底本说明 · 和合判定说明 |
+| 附录一 | 三十六对表（敦煌本列三十三对，与名目差三，照录不补；分七组） |
+| 附录二 | 三科表（五蕴 · 十二入 · 十八界） |
+| 附录三 | 品目对照（敦煌本十品 ↔ 宗宝本；护法品第九＝宣诏品第九） |
 
 ## 体例（每品八段）
 
@@ -41,21 +44,47 @@ daokedao-tanjing/
 ├── book/
 │   ├── 润泽说 道可道之坛经·通释.md   ← 母本
 │   └── 坛经·阅读版.html              ← 单文件阅读版
-├── docs/（Pages：index.html + book.html）
-├── scripts/（build_html.py + _shell.html）
+├── book/
+│   ├── figures/                      ← 附图源（图一 PNG、图二 SVG）
+│   └── 润泽说 道可道之坛经.pdf        ← A5 成书版（104 页）
+├── docs/                             ← Pages 站点（18 页）
+│   ├── index.html  preface.html  chapters/  afterword.html  appendix.html
+│   ├── downloads/  english/  book.html
+│   ├── llms.txt  sitemap.xml  robots.txt  favicon.svg  figures/
+├── apk/                              ← 离线阅读壳（aapt2 + d8 + apksigner）
+├── packages/apk-1.2.0-tanjing/       ← APK 与校验值归档
+├── data/en-posts.json                ← 英文发稿清单（/english/ 读取）
+├── scripts/
+│   ├── build_html.py  _shell.html    ← 母本 → 单文件阅读版
+│   ├── build_site.py                 ← 十品逐页站点
+│   ├── build_pdf.py                  ← A5 成书 PDF（weasyprint）
+│   ├── zenodo-deposit.py             ← 存缴取 DOI
+│   └── setup-toolchain.sh            ← 重建 Android 工具链
 ├── LICENSE  README.md  CHANGELOG.md  VERSION  CITATION.cff  .gitignore
 ```
 
 ## 重建
 
 ```bash
-python3 scripts/build_html.py     # 需 pandoc
+python3 scripts/build_html.py            # 母本 → 阅读版（需 pandoc）
+python3 scripts/build_site.py            # 18 页站点 → docs/
+python3 scripts/build_pdf.py             # A5 成书 PDF（需 weasyprint）
+bash scripts/setup-toolchain.sh          # 首次：重建 Android 工具链
+python3 apk/prepare-assets.py && bash apk/build.sh   # 离线 APK
 ```
 
 ## 在线阅读
 
-- 站点：<https://q1z2q3-debug.github.io/daokedao-tanjing/>
+- 站点：<https://q1z2q3-debug.github.io/daokedao-tanjing/>（18 页，逐品独立）
+- 目录：<https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/>
 - 全书一页：<https://q1z2q3-debug.github.io/daokedao-tanjing/book.html>
+- 下载：<https://q1z2q3-debug.github.io/daokedao-tanjing/downloads/>
+- 英文页：<https://q1z2q3-debug.github.io/daokedao-tanjing/english/>
+
+## 引用与存档
+
+- DOI：<https://doi.org/10.5281/zenodo.24223179>（Zenodo，含 md／PDF／HTML／APK 四件）
+- 引用格式见 `CITATION.cff`。
 
 ## 同系列
 

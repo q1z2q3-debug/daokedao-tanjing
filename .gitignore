@@ -3,3 +3,12 @@
 /tmp/
 __pycache__/
 *.pyc
+
+# APK 中间产物与可重建资产
+apk/build/
+apk/dist/
+apk/assets/book.html
+apk/assets/fonts/*.woff
+
+# PDF 中间件
+book/_print.html
