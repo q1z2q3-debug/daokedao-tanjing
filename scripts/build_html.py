@@ -37,6 +37,10 @@ def fig_fengfan():
     return ('<figure class="fig">%s<figcaption>图二　风幡阴阳太和<br>'
             '<span>幡为阴、风为阳、心为涵摄阴阳之太和；此心非心，故名此心。</span></figcaption></figure>' % svg)
 
+m = re.search(r"<!-- FRONTIS -->(.*?)<!-- /FRONTIS -->", body, re.S)
+frontis = m.group(1).strip() if m else ""
+if m:
+    body = body.replace(m.group(0), "")
 body = body.replace("<!-- FIG:cup -->", fig_cup()).replace("<!-- FIG:fengfan -->", fig_fengfan())
 
 parts = re.findall(r'<h1 id="([^"]+)"[^>]*>(.*?)</h1>', body, flags=re.S)
@@ -54,6 +58,6 @@ FAVICON = ("<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,
            "fill='%23F7F4EE' font-family='serif'%3E%E5%9D%87%3C/text%3E%3C/svg%3E\">")
 
 SHELL = pathlib.Path(__file__).parent.joinpath("_shell.html").read_text(encoding="utf-8")
-out = SHELL.replace("__NAV__", nav).replace("__BODY__", body).replace("__FAVICON__", FAVICON)
+out = SHELL.replace("__NAV__", nav).replace("__FRONTIS__", frontis).replace("__BODY__", body).replace("__FAVICON__", FAVICON)
 OUT.write_text(out, encoding="utf-8")
 print("ok", len(out), "chars |", len(parts), "toc items |", OUT)
