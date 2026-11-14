@@ -79,7 +79,7 @@ python3 apk/prepare-assets.py && bash apk/build.sh   # 离线 APK
 - 目录：<https://q1z2q3-debug.github.io/daokedao-tanjing/chapters/>
 - 全书一页：<https://q1z2q3-debug.github.io/daokedao-tanjing/book.html>
 - 下载：<https://q1z2q3-debug.github.io/daokedao-tanjing/downloads/>
-- 英文页：<https://q1z2q3-debug.github.io/daokedao-tanjing/english/>
+- 英文页：<https://q1z2q3-debug.github.io/daokedao-tanjing/english/>（十品十篇，已发）
 
 ## 引用与存档
 

@@ -50,6 +50,10 @@
 - 字子集 1,615 用字；`book.html` 外链 0。
 - 产物 1,512,484 B，零权限，证书 SHA-256 与五书一致；归档 `packages/apk-1.2.0-tanjing/`（APK ＋ SHA256SUMS ＋ README）。
 
+## 英文稿
+- 十品逐品英文短论十篇，dev.to 首发（账号 q1z2q3debug），一品一篇，canonical 一律指回 `/chapters/NN-slug.html`。
+- 清单写入 `data/en-posts.json`，`/english/` 页读取渲染「已发 10 篇 / 10」。
+
 ### 存档
 - Zenodo DOI `10.5281/zenodo.24223179`（md／PDF／HTML／APK 四附件）。
 - `CITATION.cff` 版本改 1.2.0，摘要改十品，补 DOI。
