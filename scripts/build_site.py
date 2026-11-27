@@ -106,7 +106,12 @@ def head(title, desc, path, jsonld=None, act="home"):
 <meta property="og:title" content="{H.escape(title)}">
 <meta property="og:description" content="{H.escape(desc)}">
 <meta property="og:url" content="{SITE}{path}">
-<meta property="og:image" content="{SITE}/favicon.svg">
+<meta property="og:image" content="{SITE}/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{H.escape(title)}">
+<meta name="twitter:description" content="{H.escape(desc)}">
+<meta name="twitter:image" content="{SITE}/og.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="author" content="润泽">
 <link rel="icon" type="image/svg+xml" href="{SITE}/favicon.svg">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap">
@@ -249,6 +254,9 @@ def build():
             nx = recs[k + 1]
             nxt = f'<a href="{SITE}/chapters/{nx["i"]:02d}-{nx["slug"]}.html">{nx["name"]} →</a>'
         zone = next(z[0] for z in ZONES if z[1] <= r["i"] <= z[2])
+        peidu = ('<p class="small">并读：《金刚经》第十分「应无所住而生其心」· 第十八分「三心不可得」→ '
+                 '<a href="https://q1z2q3-debug.github.io/daokedao-liuzu/duibi.html" rel="noopener">专题并读页</a></p>'
+                 if r["i"] == 1 else "")
         desc = f"《坛经》{r['name']}：原文底本、时代背景、字源溯源、逐段深解、体系联动、和合对照、跨典互参、小结。{r['wc']} 字。"
         ld = {"@context": "https://schema.org", "@type": "Article",
               "headline": f"{r['name']}｜{TITLE}", "url": f"{SITE}/chapters/{fn}",
@@ -264,7 +272,7 @@ def build():
 <p class="eyebrow">{zone}　·　第 {r['i']} 品　·　{r['wc']} 字</p>
 <h1>{H.escape(r['name'])}</h1>
 <p class="small">底本：敦煌本《六祖坛经》S.5475　·　品题依通行十品立目　·　<a href="{SITE}/book.html">全书阅读版</a>　·　<a href="{SITE}/chapters/">十品</a></p>
-<article>{body_html}</article>
+{peidu}<article>{body_html}</article>
 <div class="prevnext">{prev}<a href="{SITE}/chapters/">十品</a>{nxt}</div>
 </div></main>""" + foot(), encoding="utf-8")
 
@@ -365,7 +373,9 @@ def build():
 <div class="go"><a href="{SITE}/appendix.html">附录</a></div></div>
 <div class="row"><div class="no">05</div><div><h3><a href="{SITE}/english/">英文十篇 · 一品一篇</a></h3>
 <p class="small" style="margin:0;">十品各一篇英文短论，canonical 指回中文品页</p></div>
-<div class="go"><a href="{SITE}/english/">英文</a></div></div>
+<div class="go"><a href="{SITE}/english/">英文</a></div></div><div class="row"><div class="no">06</div><div><h3><a href="https://q1z2q3-debug.github.io/daokedao-liuzu/duibi.html" rel="noopener">并读 · 金刚经两分</a></h3>
+<p class="small" style="margin:0;">第十分〈庄严净土〉、第十八分〈一体同观〉原文，与自性五句、风幡公案逐句对照</p></div>
+<div class="go"><a href="https://q1z2q3-debug.github.io/daokedao-liuzu/duibi.html" rel="noopener">并读</a></div></div>
 </div>
 
 <h2>这本书主张什么</h2>

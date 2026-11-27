@@ -19,8 +19,8 @@ JAVA_HOME=${JAVA_HOME:-$(ls -d "$TC"/jdk-11*/ 2>/dev/null | head -1)}
 VAULT=${VAULT:-$HOME/.daokedao-vault}
 KS="${APK_KS:-/home/user/keys/runze-release.keystore}"
 APK_PASS=${APK_PASS:-runze2026}
-VERNAME=1.2.0
-VERCODE=12001
+VERNAME=1.2.1
+VERCODE=12011
 
 if [ ! -x "$BT/aapt2" ] || [ ! -f "$AJAR" ] || [ -z "${JAVA_HOME:-}" ]; then
   echo "工具链缺失，先跑：bash ../scripts/setup-toolchain.sh" >&2
